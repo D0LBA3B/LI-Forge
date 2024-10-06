@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "WikiLinkAssault",
+  "version": "0.1",
+  "description": "Turns every word on a webpage into a link to Wikipedia.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["wikilinkassault.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}

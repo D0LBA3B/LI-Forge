@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WikiLinkAssault</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      min-width: 250px;
+      min-height: 200px;
+      font-family: Arial, sans-serif;
+      padding: 15px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-check {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3 class="header">WikiLinkAssault</h3>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="titles">
+      <label class="form-check-label" for="titles">Replace in Titles</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="content">
+      <label class="form-check-label" for="content">Replace in Content</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="links">
+      <label class="form-check-label" for="links">Replace in Links</label>
+    </div>
+    <div class="d-grid mt-4">
+      <button id="toggle" type="button" class="btn btn-secondary btn-lg">Enable</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
